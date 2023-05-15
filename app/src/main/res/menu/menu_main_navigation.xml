@@ -1,0 +1,24 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity">
+    <group
+        android:id="@+id/group1"
+        android:checkableBehavior="single">
+    <item
+        android:id="@+id/WeatherResultsFragment"
+        android:icon="@mipmap/ic_launcher"
+        android:title="home"
+        app:itemIconTint="@color/white"
+        app:showAsAction="never" />
+        <item
+            android:id="@+id/FavouritesFragment"
+            android:icon="@drawable/ic_favourite_red"
+            android:title="Favourites"
+            app:itemIconTint="@color/white"
+            app:showAsAction="never" />
+    </group>
+
+
+
+</menu>

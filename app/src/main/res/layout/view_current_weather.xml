@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="2dp"
+    android:background="@color/cloudy"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/current_weather_card"
+        android:layout_width="match_parent"
+        android:layout_height="420dp"
+        android:background="@drawable/forest_cloudy"
+        android:orientation="vertical">
+        <ProgressBar
+            android:id="@+id/current_weather_progress_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp">
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textAppearance="@style/TextAppearance.WeatherApp.Temperature.Primary"
+            android:id="@+id/current_temp_primary"
+            android:text="23" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:id="@+id/current_temp_description"
+            android:text="Rainy"
+            android:textAppearance="@style/TextAppearance.WeatherApp.Description" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/min_max_section"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_weight="1"
+        android:background="@color/cloudy"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.20"
+            android:gravity="center"
+            android:id="@+id/min_temp_section"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/min_temp"
+                android:layout_marginBottom="-8dp"
+                android:textAppearance="@style/TextAppearance.WeatherApp.Temperature"
+                android:text="23" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textAppearance="@style/TextAppearance.WeatherApp.TemperatureLabelMinMax"
+                android:text="@string/minimum_label" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.60"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:id="@+id/current_temp"
+                android:layout_marginBottom="@dimen/negative_default_margin"
+                android:textAppearance="@style/TextAppearance.WeatherApp.Temperature"
+                android:text="23" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+
+                android:textAppearance="@style/TextAppearance.WeatherApp.TemperatureLabel"
+                android:text="@string/current_label" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.20"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:id="@+id/max_temp"
+                android:gravity="center"
+                android:layout_marginBottom="@dimen/negative_default_margin"
+                android:textAppearance="@style/TextAppearance.WeatherApp.Temperature"
+                android:text="23" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textAppearance="@style/TextAppearance.WeatherApp.TemperatureLabelMinMax"
+                android:text="@string/maximum_label" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

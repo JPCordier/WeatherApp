@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/WeatherResultsFragment">
+
+    <fragment
+        android:id="@+id/WeatherResultsFragment"
+        android:name="com.example.weatherapp.fragment.WeatherResultsFragment"
+        android:label="Weather Results"
+        tools:layout="@layout/fragment_weather_results">
+    </fragment>
+    <fragment
+        android:id="@+id/FavouritesFragment"
+        android:name="com.example.weatherapp.fragment.FavouritesFragment"
+        android:label="Favourites"
+        tools:layout="@layout/fragment_favourites">
+
+    <action
+        android:id="@+id/action_FavouritesFragment_to_FavouriteWeatherResultsFragment"
+        app:destination="@id/FavouriteWeatherResultsFragment" />
+
+    <argument
+        android:name="latitude"
+        app:argType="string" />
+    <argument
+        android:name="longitude"
+        app:argType="string" />
+    <argument
+        android:name="name"
+        app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/FavouriteWeatherResultsFragment"
+        android:name="com.example.weatherapp.fragment.FavouritedWeatherResultsFragment"
+        android:label="Favourite Result"
+        tools:layout="@layout/fragment_weather_results">
+
+
+
+    </fragment>
+</navigation>

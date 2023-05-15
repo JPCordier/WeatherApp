@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" >
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/sunny"
+>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:weightSum="1"
+            android:padding="8dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Tuesday"
+                android:layout_weight="0.45"
+                android:layout_marginLeft="@dimen/double_default_margin"
+                android:textAppearance="@style/TextAppearance.WeatherApp.Forecast"
+                android:id="@+id/day"/>
+             <ImageView
+                 android:layout_width="wrap_content"
+                 android:layout_height="30dp"
+                 android:id="@+id/weather_icon"
+                 android:src="@drawable/clear3x"
+                 android:layout_marginTop="4dp"
+                 android:layout_weight="0.35"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="20"
+                android:layout_weight="0.2"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textAppearance="@style/TextAppearance.WeatherApp.Forecast"
+                android:id="@+id/forecast_temp"/>
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+</layout>
